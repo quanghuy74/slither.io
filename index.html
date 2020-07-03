@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Slither.io</title>
+    <link rel='stylesheet' href='lib/sweet-alert.css'>
+    <script src='lib/sweet-alert.min.js'></script>
+    <script src="lib/phaser.min.js"></script>
+    <script src="src/menu.js"></script>
+    <script src="src/end.js"></script>
+    <script src="src/game.js"></script>
+    <script src="src/snake.js"></script>
+    <script src="src/playerSnake.js"></script>
+    <script src="src/botSnake.js"></script>
+    <script src="src/eye.js"></script>
+    <script src="src/eyePair.js"></script>
+    <script src="src/shadow.js"></script>
+    <script src="src/food.js"></script>
+    <script src="src/util.js"></script>
+</head>
+<body>
+<script>
+    //  initialize game
+    (function () {
+        var game = new Phaser.Game(innerWidth, innerHeight, Phaser.AUTO, null);
+
+        game.state.add('Menu', Menu);
+        game.state.add('Game', Game);
+        game.state.add('End', end);
+
+        game.state.start('Menu');
+    })();
+</script>
+</body>
+</html>
